@@ -21,7 +21,7 @@ export default function ConfirmationScreen({ route, navigation }) {
       time: time,
       totalPrice: totalPrice,
       deposit: DEPOSIT_VALUE,
-      totalPaid: totalToPay,
+      totalPaid: DEPOSIT_VALUE, // ALTERADO AQUI: Agora salva apenas o valor da caução.
       status: 'Agendado',
       notes: notes, // Salvamos as observações
     };
@@ -39,8 +39,15 @@ export default function ConfirmationScreen({ route, navigation }) {
 
   const showTermsAndConfirm = () => {
     Alert.alert(
-      "Termos e Condições",
-      "Ao continuar, você concorda com nossa política de cancelamento...", // Mensagem completa dos termos
+      "Termos e Condições do Agendamento",
+      "Por favor, leia atentamente nossa política antes de confirmar:\n\n" +
+      "1. SOBRE A CAUÇÃO:\n" +
+      "Para garantir a reserva e exclusividade do seu horário em nossa agenda, solicitamos o pagamento de uma caução no valor de R$ 20,00. A confirmação do seu agendamento só será efetivada após o pagamento deste valor.\n\n" +
+      "2. SOBRE O PAGAMENTO DOS SERVIÇOS:\n" +
+      "O valor total referente aos serviços escolhidos por você será pago separadamente, no dia do seu atendimento, diretamente em nosso estabelecimento.\n\n" +
+      "3. POLÍTICA DE CANCELAMENTO E REEMBOLSO:\n" +
+      "O valor da caução de R$ 20,00 é reembolsável integralmente APENAS se o cancelamento do agendamento for realizado por você em um prazo de até 2 (duas) horas, contadas a partir do momento da confirmação do pagamento da caução. Após o término deste prazo, o valor da caução não será devolvido sob nenhuma circunstância.\n\n" +
+      "Ao clicar em 'Aceito e Continuar', você declara que leu, compreendeu e concorda com todos os termos apresentados.",
       [
         { text: "Cancelar", style: 'cancel' },
         { text: "Aceito e Continuar", onPress: handlePayment }

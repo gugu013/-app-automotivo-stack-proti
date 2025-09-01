@@ -57,7 +57,7 @@ export default function MyAppointmentsScreen({ navigation }) {
         <View style={styles.separator} />
         <Text style={styles.cardText}>Data: {item.date?.split('-').reverse().join('/')} às {item.time}</Text>
         <Text style={styles.cardText}>
-          Total Pago: R$ {(item.totalPaid || item.totalPrice).toFixed(2)}
+          Total Pago: R$ {Number(20).toFixed(2)}
         </Text>
         <View style={styles.statusContainer}>
           <Text style={styles.cardText}>Status: </Text>
@@ -90,8 +90,13 @@ export default function MyAppointmentsScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.lightGray },
-  list: { padding: 20 },
+  container: { 
+    flex: 1, 
+    backgroundColor: COLORS.secondary
+  },
+  list: { 
+    padding: 20 
+  },
   card: { 
     backgroundColor: COLORS.white, 
     borderRadius: 8, 
@@ -101,13 +106,38 @@ const styles = StyleSheet.create({
   cardClickable: {
     padding: 20,
   },
-  cardTitle: { fontSize: 18, fontWeight: 'bold', marginBottom: 5, color: COLORS.secondary },
-  cardSubtitle: { fontSize: 16, color: '#444', marginLeft: 10 },
-  separator: { height: 1, backgroundColor: '#eee', marginVertical: 10 },
-  cardText: { fontSize: 16, color: '#333', marginBottom: 5 },
-  statusContainer: { flexDirection: 'row', alignItems: 'center' },
-  statusText: { fontSize: 16, fontWeight: 'bold' },
-  statusScheduled: { color: COLORS.primary },
+  cardTitle: { 
+    fontSize: 18, 
+    fontWeight: 'bold', 
+    marginBottom: 5, 
+    color: COLORS.secondary 
+  },
+  cardSubtitle: { 
+    fontSize: 16, 
+    color: COLORS.secondary,
+    marginLeft: 10 
+  },
+  separator: { 
+    height: 1, 
+    backgroundColor: '#eee', 
+    marginVertical: 10 
+  },
+  cardText: { 
+    fontSize: 16, 
+    color: COLORS.secondary,
+    marginBottom: 5 
+  },
+  statusContainer: { 
+    flexDirection: 'row', 
+    alignItems: 'center' 
+  },
+  statusText: { 
+    fontSize: 16, 
+    fontWeight: 'bold' 
+  },
+  statusScheduled: { 
+    color: COLORS.primary 
+  },
   cancelButton: {
     backgroundColor: '#dc3545',
     flexDirection: 'row',
@@ -124,6 +154,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginLeft: 8,
   },
-  emptyContainer: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  emptyText: { fontSize: 18, color: '#666' },
+  emptyContainer: { 
+    flex: 1, 
+    alignItems: 'center', 
+    justifyContent: 'center' 
+  },
+  emptyText: { 
+    fontSize: 18, 
+    color: COLORS.white
+  },
 });

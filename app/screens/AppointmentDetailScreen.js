@@ -74,12 +74,12 @@ export default function AppointmentDetailScreen({ route }) {
           </View>
         </View>
 
-        <View style={styles.policyBox}>
-          <Text style={styles.policyTitle}>Nossa Política de Agendamento</Text>
+      <View style={styles.policyBox}>
+          <Text style={styles.policyTitle}>Política de Agendamento</Text>
           <Text style={styles.policyText}>
-            Para garantir a exclusividade do seu horário e a organização de nossa agenda, solicitamos uma caução de R$ 20,00, que não é reembolsável.
+            Para garantir a exclusividade do seu horário, solicitamos uma caução de R$ 20,00. O pagamento pelos serviços será realizado diretamente no estabelecimento.
             {'\n\n'}
-            O valor referente aos serviços será estornado integralmente caso o cancelamento ocorra em até 2 hours antes do horário agendado. Cancelamentos tardios impactam nossa capacidade de atender outros clientes e, por isso, não são elegíveis para reembolso do valor do serviço. Agradecemos a sua compreensão.
+            A caução é reembolsável integralmente caso o cancelamento seja solicitado em até 2 horas após a confirmação do pagamento. Passado este prazo, o valor da caução não será devolvido. Agradecemos a sua compreensão.
           </Text>
         </View>
       </ScrollView>

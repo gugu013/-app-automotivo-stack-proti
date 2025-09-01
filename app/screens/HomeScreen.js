@@ -29,7 +29,7 @@ export default function HomeScreen({ navigation }) {
       </View>
       <View style={styles.menuContainer}>
         <TouchableOpacity style={styles.menuButton} onPress={() => navigation.navigate('NewAppointment')}>
-          <Text style={styles.menuButtonText}>Novo Agendamento</Text>
+          <Text style={styles.menuButtonText}>Novo Agendimento</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menuButton} onPress={() => navigation.navigate('MyAppointments')}>
           <Text style={styles.menuButtonText}>Meus Agendamentos</Text>
@@ -48,7 +48,7 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.lightGray
+    backgroundColor: COLORS.secondary // ALTERADO AQUI
   },
   header: {
     padding: 20,

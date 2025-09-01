@@ -25,13 +25,51 @@ export default function StoreScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.lightGray },
-  list: { padding: 10 },
-  card: { flex: 1, backgroundColor: COLORS.white, borderRadius: 8, margin: 5, elevation: 3, overflow: 'hidden' },
-  productImage: { width: '100%', height: 120, resizeMode: 'cover', backgroundColor: '#eee' },
-  cardContent: { padding: 10 },
-  productName: { fontSize: 14, fontWeight: '600', marginBottom: 5, minHeight: 40, color: COLORS.secondary },
-  productPrice: { fontSize: 16, fontWeight: 'bold', color: COLORS.primary, marginBottom: 10 },
-  buyButton: { backgroundColor: COLORS.accent, padding: 8, borderRadius: 5, alignItems: 'center' },
-  buyButtonText: { color: COLORS.secondary, fontWeight: 'bold' },
+  container: { 
+    flex: 1, 
+    backgroundColor: COLORS.lightAccent // ALTERADO AQUI
+  },
+  list: { 
+    padding: 10 
+  },
+  card: { 
+    flex: 1, 
+    backgroundColor: COLORS.white, 
+    borderRadius: 8, 
+    margin: 5, 
+    elevation: 3, 
+    overflow: 'hidden' 
+  },
+  productImage: { 
+    width: '100%', 
+    height: 120, 
+    resizeMode: 'cover', 
+    backgroundColor: '#eee' 
+  },
+  cardContent: { 
+    padding: 10 
+  },
+  productName: { 
+    fontSize: 14, 
+    fontWeight: '600', 
+    marginBottom: 5, 
+    minHeight: 40, 
+    color: COLORS.secondary 
+  },
+  productPrice: { 
+    fontSize: 16, 
+    fontWeight: 'bold', 
+    color: COLORS.primary, 
+    marginBottom: 10 
+  },
+  buyButton: { 
+    backgroundColor: COLORS.accent, 
+    padding: 8, 
+    borderRadius: 5, 
+    alignItems: 'center' 
+  },
+  buyButtonText: { 
+    color: COLORS.secondary, 
+    fontWeight: 'bold' 
+  },
 });

@@ -48,39 +48,83 @@ export default function SelectServicesScreen({ route, navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.lightGray },
-  title: { fontSize: 22, fontWeight: 'bold', margin: 20, textAlign: 'center', color: COLORS.secondary },
-  subtitle: { fontSize: 16, color: '#666', marginBottom: 20, textAlign: 'center' },
+  container: { 
+    flex: 1, 
+    backgroundColor: COLORS.secondary // ALTERADO AQUI
+  },
+  title: { 
+    fontSize: 22, 
+    fontWeight: 'bold', 
+    margin: 20, 
+    textAlign: 'center', 
+    color: COLORS.white // ALTERADO AQUI
+  },
+  subtitle: { 
+    fontSize: 16, 
+    color: COLORS.lightGray, // ALTERADO AQUI
+    marginBottom: 20, 
+    textAlign: 'center' 
+  },
   serviceCard: { 
     flexDirection: 'row', 
     justifyContent: 'space-between', 
-    alignItems: 'center', // Alinha verticalmente
-    backgroundColor: COLORS.white, 
+    alignItems: 'center',
+    backgroundColor: COLORS.primary, // ALTERADO AQUI
     padding: 20, 
     borderRadius: 8, 
     marginHorizontal: 20, 
     marginBottom: 15, 
     borderWidth: 2, 
-    borderColor: '#ddd' 
+    borderColor: COLORS.gray // ALTERADO AQUI
   },
-  selectedCard: { borderColor: COLORS.primary, backgroundColor: '#e8f0fe' },
+  selectedCard: { 
+    borderColor: COLORS.accent, // ALTERADO AQUI
+    backgroundColor: COLORS.primary // Mantém o fundo escuro na seleção
+  },
   serviceName: { 
     fontSize: 16, 
     fontWeight: '600', 
-    color: COLORS.secondary,
-    flex: 1, // Permite que o texto cresça e quebre a linha
-    marginRight: 10, // Adiciona um espaço entre o nome e o preço
+    color: COLORS.white, // ALTERADO AQUI
+    flex: 1,
+    marginRight: 10,
   },
   servicePrice: { 
     fontSize: 16, 
-    color: COLORS.secondary,
-    fontWeight: 'bold', // Deixa o preço em negrito para destaque
+    color: COLORS.white, // ALTERADO AQUI
+    fontWeight: 'bold',
   },
-  selectedText: { color: COLORS.primary },
-  footer: { borderTopWidth: 1, borderColor: '#ddd', padding: 20, backgroundColor: COLORS.white },
-  totalLabel: { fontSize: 18, color: '#666' },
-  totalPrice: { fontSize: 28, fontWeight: 'bold', marginBottom: 15, color: COLORS.secondary },
-  button: { height: 50, backgroundColor: COLORS.accent, borderRadius: 8, alignItems: 'center', justifyContent: 'center' },
-  disabledButton: { backgroundColor: COLORS.gray },
-  buttonText: { color: COLORS.secondary, fontSize: 18, fontWeight: 'bold' },
+  selectedText: { 
+    color: COLORS.accent // ALTERADO AQUI
+  },
+  footer: { 
+    borderTopWidth: 1, 
+    borderColor: COLORS.primary, // ALTERADO AQUI
+    padding: 20, 
+    backgroundColor: 'transparent' // ALTERADO AQUI
+  },
+  totalLabel: { 
+    fontSize: 18, 
+    color: COLORS.lightGray // ALTERADO AQUI
+  },
+  totalPrice: { 
+    fontSize: 28, 
+    fontWeight: 'bold', 
+    marginBottom: 15, 
+    color: COLORS.white // ALTERADO AQUI
+  },
+  button: { 
+    height: 50, 
+    backgroundColor: COLORS.accent, 
+    borderRadius: 8, 
+    alignItems: 'center', 
+    justifyContent: 'center' 
+  },
+  disabledButton: { 
+    backgroundColor: COLORS.gray 
+  },
+  buttonText: { 
+    color: COLORS.secondary, 
+    fontSize: 18, 
+    fontWeight: 'bold' 
+  },
 });

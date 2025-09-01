@@ -57,11 +57,23 @@ export default function NewAppointmentScreen({ navigation }) {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.lightGray, alignItems: 'center' },
-  title: { fontSize: 22, fontWeight: 'bold', marginVertical: 20, color: COLORS.secondary },
-  list: { width: '100%', paddingHorizontal: 20 },
+  container: { 
+    flex: 1, 
+    backgroundColor: COLORS.secondary,
+    alignItems: 'center' 
+  },
+  title: { 
+    fontSize: 22, 
+    fontWeight: 'bold', 
+    marginVertical: 20, 
+    color: COLORS.white 
+  },
+  list: { 
+    width: '100%', 
+    paddingHorizontal: 20 
+  },
   addButton: {
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.accent,
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
@@ -69,18 +81,61 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   addButtonText: {
-    color: COLORS.white,
+    color: COLORS.secondary,
     fontSize: 16,
     fontWeight: 'bold',
   },
-  vehicleCard: { backgroundColor: COLORS.white, padding: 15, borderRadius: 8, marginBottom: 15, borderWidth: 2, borderColor: '#ddd' },
-  selectedVehicleCard: { borderColor: COLORS.accent, backgroundColor: '#FFFBEA' },
-  vehicleModel: { fontSize: 18, fontWeight: 'bold', color: COLORS.secondary },
-  vehicleInfo: { fontSize: 15, color: '#666', marginTop: 5 },
-  selectedText: { color: COLORS.primary },
-  emptyContainer: { alignItems: 'center', marginTop: 50 },
-  emptyText: { textAlign: 'center', fontSize: 16, color: COLORS.gray, marginBottom: 20 },
-  button: { width: '90%', height: 50, backgroundColor: COLORS.accent, borderRadius: 8, alignItems: 'center', justifyContent: 'center', marginTop: 10, marginBottom: 20 },
-  disabledButton: { backgroundColor: COLORS.gray },
-  buttonText: { color: COLORS.secondary, fontSize: 18, fontWeight: 'bold' }
+  vehicleCard: { 
+    backgroundColor: COLORS.primary, // ALTERADO AQUI
+    padding: 15, 
+    borderRadius: 8, 
+    marginBottom: 15, 
+    borderWidth: 2, 
+    borderColor: COLORS.gray 
+  },
+  selectedVehicleCard: { 
+    borderColor: COLORS.accent, 
+    backgroundColor: '#FFFBEA' 
+  },
+  vehicleModel: { 
+    fontSize: 18, 
+    fontWeight: 'bold', 
+    color: COLORS.white // ALTERADO AQUI
+  },
+  vehicleInfo: { 
+    fontSize: 15, 
+    color: COLORS.white, // ALTERADO AQUI
+    marginTop: 5 
+  },
+  selectedText: { 
+    color: COLORS.primary 
+  },
+  emptyContainer: { 
+    alignItems: 'center', 
+    marginTop: 50 
+  },
+  emptyText: { 
+    textAlign: 'center', 
+    fontSize: 16, 
+    color: COLORS.white,
+    marginBottom: 20 
+  },
+  button: { 
+    width: '90%', 
+    height: 50, 
+    backgroundColor: COLORS.accent, 
+    borderRadius: 8, 
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    marginTop: 10, 
+    marginBottom: 20 
+  },
+  disabledButton: { 
+    backgroundColor: COLORS.gray 
+  },
+  buttonText: { 
+    color: COLORS.secondary, 
+    fontSize: 18, 
+    fontWeight: 'bold' 
+  }
 });

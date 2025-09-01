@@ -77,8 +77,13 @@ export default function MyVehiclesScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.lightGray },
-  list: { padding: 20 },
+  container: { 
+    flex: 1, 
+    backgroundColor: COLORS.secondary // ALTERADO AQUI
+  },
+  list: { 
+    padding: 20 
+  },
   addButton: {
     backgroundColor: COLORS.accent,
     padding: 15,
@@ -109,8 +114,24 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 20,
   },
-  cardTitle: { fontSize: 18, fontWeight: 'bold', color: COLORS.secondary },
-  cardText: { fontSize: 16, color: '#444', marginTop: 5 },
-  emptyContainer: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingTop: 50 },
-  emptyText: { fontSize: 18, color: COLORS.gray },
+  cardTitle: { 
+    fontSize: 18, 
+    fontWeight: 'bold', 
+    color: COLORS.secondary 
+  },
+  cardText: { 
+    fontSize: 16, 
+    color: COLORS.secondary, // ALTERADO AQUI
+    marginTop: 5 
+  },
+  emptyContainer: { 
+    flex: 1, 
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    paddingTop: 50 
+  },
+  emptyText: { 
+    fontSize: 18, 
+    color: COLORS.white // ALTERADO AQUI
+  },
 });

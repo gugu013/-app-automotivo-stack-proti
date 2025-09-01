@@ -21,13 +21,18 @@ export default function SelectDateTimeScreen({ route, navigation }) {
         <Calendar
           style={styles.calendar}
           onDayPress={(day) => { setSelectedDate(day.dateString); setSelectedTime(''); }}
-          markedDates={{ [selectedDate]: { selected: true, selectedColor: COLORS.primary, disableTouchEvent: true }, }}
+          markedDates={{ [selectedDate]: { selected: true, disableTouchEvent: true }, }}
           minDate={today}
           theme={{
-            arrowColor: COLORS.primary,
+            calendarBackground: COLORS.primary,
+            arrowColor: COLORS.accent,
             todayTextColor: COLORS.accent,
-            selectedDayBackgroundColor: COLORS.primary,
-            selectedDayTextColor: COLORS.white,
+            selectedDayBackgroundColor: COLORS.accent,
+            selectedDayTextColor: COLORS.secondary,
+            monthTextColor: COLORS.white,
+            dayTextColor: COLORS.white,
+            textDisabledColor: COLORS.gray,
+            textSectionTitleColor: COLORS.lightGray,
           }}
         />
         {selectedDate && (
@@ -53,18 +58,79 @@ export default function SelectDateTimeScreen({ route, navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.lightGray },
-  title: { fontSize: 22, fontWeight: 'bold', margin: 20, textAlign: 'center', color: COLORS.secondary },
-  subtitle: { fontSize: 16, fontWeight: '600', marginTop: 20, marginBottom: 10, textAlign: 'center', color: COLORS.secondary },
-  calendar: { borderWidth: 1, borderColor: '#ddd', borderRadius: 8, marginHorizontal: 10 },
-  timeContainer: { marginTop: 10, paddingHorizontal: 20 },
-  timeButtonsWrapper: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: 10 },
-  timeButton: { borderWidth: 1, borderColor: '#ddd', borderRadius: 8, paddingVertical: 10, paddingHorizontal: 15, backgroundColor: COLORS.white },
-  selectedTimeButton: { backgroundColor: COLORS.primary, borderColor: COLORS.primary },
-  timeText: { fontSize: 16, color: COLORS.secondary },
-  selectedTimeText: { color: COLORS.white },
-  footer: { borderTopWidth: 1, borderColor: '#ddd', padding: 20, backgroundColor: COLORS.white },
-  button: { height: 50, backgroundColor: COLORS.accent, borderRadius: 8, alignItems: 'center', justifyContent: 'center' },
-  disabledButton: { backgroundColor: COLORS.gray },
-  buttonText: { color: COLORS.secondary, fontSize: 18, fontWeight: 'bold' },
+  container: { 
+    flex: 1, 
+    backgroundColor: COLORS.secondary // ALTERADO AQUI
+  },
+  title: { 
+    fontSize: 22, 
+    fontWeight: 'bold', 
+    margin: 20, 
+    textAlign: 'center', 
+    color: COLORS.white // ALTERADO AQUI
+  },
+  subtitle: { 
+    fontSize: 16, 
+    fontWeight: '600', 
+    marginTop: 20, 
+    marginBottom: 10, 
+    textAlign: 'center', 
+    color: COLORS.white // ALTERADO AQUI
+  },
+  calendar: { 
+    borderWidth: 1, 
+    borderColor: COLORS.gray, // ALTERADO AQUI
+    borderRadius: 8, 
+    marginHorizontal: 10 
+  },
+  timeContainer: { 
+    marginTop: 10, 
+    paddingHorizontal: 20 
+  },
+  timeButtonsWrapper: { 
+    flexDirection: 'row', 
+    flexWrap: 'wrap', 
+    justifyContent: 'center', 
+    gap: 10 
+  },
+  timeButton: { 
+    borderWidth: 1, 
+    borderColor: COLORS.gray, // ALTERADO AQUI
+    borderRadius: 8, 
+    paddingVertical: 10, 
+    paddingHorizontal: 15, 
+    backgroundColor: COLORS.primary // ALTERADO AQUI
+  },
+  selectedTimeButton: { 
+    backgroundColor: COLORS.accent, // ALTERADO AQUI
+    borderColor: COLORS.accent // ALTERADO AQUI
+  },
+  timeText: { 
+    fontSize: 16, 
+    color: COLORS.white // ALTERADO AQUI
+  },
+  selectedTimeText: { 
+    color: COLORS.secondary // ALTERADO AQUI
+  },
+  footer: { 
+    borderTopWidth: 1, 
+    borderColor: COLORS.primary, // ALTERADO AQUI
+    padding: 20, 
+    backgroundColor: 'transparent' // ALTERADO AQUI
+  },
+  button: { 
+    height: 50, 
+    backgroundColor: COLORS.accent, 
+    borderRadius: 8, 
+    alignItems: 'center', 
+    justifyContent: 'center' 
+  },
+  disabledButton: { 
+    backgroundColor: COLORS.gray 
+  },
+  buttonText: { 
+    color: COLORS.secondary, 
+    fontSize: 18, 
+    fontWeight: 'bold' 
+  },
 });

@@ -69,16 +69,75 @@ export default function AddVehicleScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.lightGray },
-  scrollContent: { padding: 20 },
-  title: { fontSize: 24, fontWeight: 'bold', color: COLORS.secondary, marginBottom: 30, textAlign: 'center' },
-  input: { width: '100%', height: 50, backgroundColor: COLORS.white, borderRadius: 8, paddingHorizontal: 15, fontSize: 16, marginBottom: 15, borderWidth: 1, borderColor: '#ddd', color: COLORS.secondary },
-  typeLabel: { fontSize: 16, color: COLORS.secondary, fontWeight: '600', marginBottom: 10, marginTop: 5 },
-  typeContainer: { flexDirection: 'row', justifyContent: 'space-around', marginBottom: 30 },
-  typeButton: { paddingVertical: 10, paddingHorizontal: 20, borderWidth: 1, borderColor: COLORS.gray, borderRadius: 20 },
-  selectedTypeButton: { backgroundColor: COLORS.primary, borderColor: COLORS.primary },
-  typeButtonText: { color: COLORS.secondary, fontWeight: '600' },
-  selectedTypeText: { color: COLORS.white },
-  button: { width: '100%', height: 50, backgroundColor: COLORS.accent, borderRadius: 8, alignItems: 'center', justifyContent: 'center', marginTop: 10 },
-  buttonText: { color: COLORS.secondary, fontSize: 18, fontWeight: 'bold' },
+  container: { 
+    flex: 1, 
+    backgroundColor: COLORS.secondary // ALTERADO AQUI
+  },
+  scrollContent: { 
+    padding: 20 
+  },
+  title: { 
+    fontSize: 24, 
+    fontWeight: 'bold', 
+    color: COLORS.white, // ALTERADO AQUI
+    marginBottom: 30, 
+    textAlign: 'center' 
+  },
+  input: { 
+    width: '100%', 
+    height: 50, 
+    backgroundColor: COLORS.primary, // ALTERADO AQUI
+    borderRadius: 8, 
+    paddingHorizontal: 15, 
+    fontSize: 16, 
+    marginBottom: 15, 
+    borderWidth: 1, 
+    borderColor: COLORS.gray, // ALTERADO AQUI
+    color: COLORS.white // ALTERADO AQUI
+  },
+  typeLabel: { 
+    fontSize: 16, 
+    color: COLORS.white, // ALTERADO AQUI
+    fontWeight: '600', 
+    marginBottom: 10, 
+    marginTop: 5 
+  },
+  typeContainer: { 
+    flexDirection: 'row', 
+    justifyContent: 'space-around', 
+    marginBottom: 30 
+  },
+  typeButton: { 
+    paddingVertical: 10, 
+    paddingHorizontal: 20, 
+    borderWidth: 1, 
+    borderColor: COLORS.gray, 
+    borderRadius: 20,
+    backgroundColor: COLORS.primary // ADICIONADO AQUI
+  },
+  selectedTypeButton: { 
+    backgroundColor: COLORS.accent, // ALTERADO AQUI
+    borderColor: COLORS.accent // ALTERADO AQUI
+  },
+  typeButtonText: { 
+    color: COLORS.white, // ALTERADO AQUI
+    fontWeight: '600' 
+  },
+  selectedTypeText: { 
+    color: COLORS.secondary // ALTERADO AQUI
+  },
+  button: { 
+    width: '100%', 
+    height: 50, 
+    backgroundColor: COLORS.accent, 
+    borderRadius: 8, 
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    marginTop: 10 
+  },
+  buttonText: { 
+    color: COLORS.secondary, 
+    fontSize: 18, 
+    fontWeight: 'bold' 
+  },
 });
