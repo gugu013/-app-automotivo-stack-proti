@@ -29,7 +29,7 @@ export default function HomeScreen({ navigation }) {
       </View>
       <View style={styles.menuContainer}>
         <TouchableOpacity style={styles.menuButton} onPress={() => navigation.navigate('NewAppointment')}>
-          <Text style={styles.menuButtonText}>Novo Agendimento</Text>
+          <Text style={styles.menuButtonText}>Novo Agendamento</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menuButton} onPress={() => navigation.navigate('MyAppointments')}>
           <Text style={styles.menuButtonText}>Meus Agendamentos</Text>

@@ -44,7 +44,7 @@ export default function MyVehiclesScreen({ navigation }) {
         <Text style={styles.cardText}>{item.km} km</Text>
       </View>
       <View style={styles.cardActions}>
-        <TouchableOpacity onPress={() => alert('Função Editar em breve!')}>
+        <TouchableOpacity onPress={() => navigation.navigate('EditVehicle', { vehicle: item })}>
           <Feather name="edit-2" size={24} color={COLORS.primary} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => handleDelete(item)}>
@@ -61,7 +61,7 @@ export default function MyVehiclesScreen({ navigation }) {
         renderItem={renderItem}
         keyExtractor={item => item.id}
         contentContainerStyle={styles.list}
-        ListHeaderComponent={ // Adiciona o botão no topo da lista
+        ListHeaderComponent={
           <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('AddVehicle')}>
             <Text style={styles.addButtonText}>+ Cadastrar Novo Veículo</Text>
           </TouchableOpacity>
@@ -79,7 +79,7 @@ export default function MyVehiclesScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
-    backgroundColor: COLORS.secondary // ALTERADO AQUI
+    backgroundColor: COLORS.secondary
   },
   list: { 
     padding: 20 
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   },
   cardText: { 
     fontSize: 16, 
-    color: COLORS.secondary, // ALTERADO AQUI
+    color: COLORS.secondary,
     marginTop: 5 
   },
   emptyContainer: { 
@@ -132,6 +132,6 @@ const styles = StyleSheet.create({
   },
   emptyText: { 
     fontSize: 18, 
-    color: COLORS.white // ALTERADO AQUI
+    color: COLORS.white
   },
 });

@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AddVehicleScreen from './screens/AddVehicleScreen';
 import AppointmentDetailScreen from './screens/AppointmentDetailScreen';
 import ConfirmationScreen from './screens/ConfirmationScreen';
+import EditVehicleScreen from './screens/EditVehicleScreen';
 import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import MyAppointmentsScreen from './screens/MyAppointmentsScreen';
@@ -26,6 +27,7 @@ export default function App() {
         <Stack.Screen name="NewAppointment" component={NewAppointmentScreen} options={{ title: 'Fazer Agendamento' }} />
         <Stack.Screen name="AddVehicle" component={AddVehicleScreen} options={{ title: 'Adicionar Veículo' }} />
         <Stack.Screen name="MyVehicles" component={MyVehiclesScreen} options={{ title: 'Meus Veículos' }} />
+        <Stack.Screen name="EditVehicle" component={EditVehicleScreen} options={{ title: 'Editar Veículo' }} />
         <Stack.Screen name="MyAppointments" component={MyAppointmentsScreen} options={{ title: 'Meus Agendamentos' }} />
         <Stack.Screen name="AppointmentDetail" component={AppointmentDetailScreen} options={{ title: 'Detalhes do Agendamento' }} />
         <Stack.Screen name="SelectServices" component={SelectServicesScreen} options={{ title: 'Passo 2: Serviços' }} />
